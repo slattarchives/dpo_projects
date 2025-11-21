@@ -4,270 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revo Coffee</title>
-    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            font-family: Arial;
             color: #415167;
         }
         
-        .main-container {
+        header {
             display: flex;
-            min-height: 100vh;
+            height: 500px;
         }
         
-        .left-section {
+        .left {
             flex: 1;
             background: white;
-            position: relative;
         }
         
-        .brand-logo {
-            position: absolute;
-            top: 40px;
-            left: 40px;
-            width: 100px;
-            height: auto;
-        }
-        
-        .center-section {
+        .center {
             flex: 1;
             background: white;
-            position: relative;
-            overflow: hidden;
         }
         
-        .coffee-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .right-section {
-            flex: 0 0 300px;
+        .right {
+            width: 200px;
             background: #415167;
-            position: relative;
         }
         
-        .cart-icon {
-            position: absolute;
-            top: 40px;
-            right: 40px;
-            width: 30px;
-            height: auto;
-        }
-        
-        .main-title {
-            position: absolute;
-            top: 40%;
-            right: -100px;
-            transform: translateY(-50%);
-            font-size: 48px;
-            font-weight: bold;
-            color: #415167;
-            line-height: 1.2;
-            text-align: right;
-        }
-        
-        .hero-section {
-            padding: 100px 40px 60px;
-            background: white;
-            text-align: center;
-        }
-        
-        .hero-subtitle {
-            font-size: 24px;
-            color: #415167;
-            margin-bottom: 10px;
-        }
-        
-        .hero-title {
-            font-size: 32px;
-            font-weight: bold;
-            color: #415167;
-            margin-bottom: 50px;
-        }
-        
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .feature-item {
-            text-align: center;
-            max-width: 200px;
-        }
-        
-        .feature-icon {
+        .logo {
+            margin: 40px;
             width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
         }
         
-        .feature-text {
-            color: #415167;
-            font-size: 14px;
-        }
-        
-        .products-section {
-            position: relative;
-            height: 600px;
-            margin: 60px 0;
-        }
-        
-        .products-bg {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 25%;
-            height: 100%;
-            background: #415167;
-        }
-        
-        .products-content {
-            position: relative;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .products-title {
-            font-size: 36px;
-            font-weight: bold;
-            color: #415167;
-            text-align: center;
-        }
-        
-        .products-grid {
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            width: 60%;
-        }
-        
-        .product-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        .product-image {
+        .main-img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 15px;
+            height: 100%;
         }
         
-        .giftset-section {
-            position: relative;
-            height: 500px;
-            margin: 60px 0;
+        .cart {
+            margin: 40px;
+            width: 25px;
         }
         
-        .giftset-bg {
+        .big-text {
             position: absolute;
-            left: 0;
-            top: 0;
-            width: 75%;
-            height: 100%;
-            background: #EDF0F5;
-        }
-        
-        .giftset-content {
-            position: relative;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .giftset-text {
-            text-align: center;
-            margin-right: 200px;
-        }
-        
-        .giftset-title {
-            font-size: 28px;
-            color: #415167;
-            margin-bottom: 10px;
-        }
-        
-        .giftset-subtitle {
-            font-size: 32px;
+            top: 200px;
+            right: 50px;
+            font-size: 40px;
             font-weight: bold;
-            color: #415167;
+            line-height: 1.2;
         }
         
-        .giftset-image {
-            position: absolute;
-            right: 100px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 300px;
-            height: auto;
+        main {
+            padding: 50px 20px;
         }
         
-        .combo-section {
-            position: relative;
-            height: 500px;
-            margin: 60px 0;
+        section {
+            margin: 50px 0;
+            text-align: center;
         }
         
-        .combo-bg {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 25%;
-            height: 100%;
-            background: #415167;
-        }
-        
-        .combo-content {
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .combo-title {
+        h2 {
             font-size: 28px;
-            color: #415167;
-            margin-bottom: 40px;
-            text-align: center;
+            margin-bottom: 30px;
         }
         
-        .combo-grid {
+        .icons {
             display: flex;
-            gap: 30px;
             justify-content: center;
+            gap: 30px;
         }
         
-        .combo-item {
-            text-align: center;
+        .icon {
+            width: 60px;
+            height: 60px;
         }
         
-        .combo-image {
-            width: 150px;
+        .products {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .product {
+            background: white;
+            padding: 15px;
+        }
+        
+        .product-img {
+            width: 100%;
             height: 150px;
-            object-fit: cover;
-            margin-bottom: 15px;
+        }
+        
+        .combos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .combo-img {
+            width: 120px;
+            height: 120px;
         }
         
         footer {
@@ -275,120 +114,92 @@
             color: white;
             text-align: center;
             padding: 20px;
-            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <!-- Главная секция с тремя блоками -->
-    <div class="main-container">
-        <!-- Левый белый блок -->
-        <div class="left-section">
-            <img src="assets/img/LOGO.png" alt="Brand Logo" class="brand-logo">
+    <header>
+        <div class="left">
+            <img src="assets/img/LOGO.png" alt="Logo" class="logo">
         </div>
         
-        <!-- Центральный блок с изображением -->
-        <div class="center-section">
-            <img src="assets/img/Баннер.png" alt="Coffee" class="coffee-image">
+        <div class="center">
+            <img src="assets/img/Баннер.png" alt="Coffee" class="main-img">
         </div>
         
-        <!-- Правый блок с меню -->
-        <div class="right-section">
-            <img src="assets/icons/shopping-cart-3.png" alt="Cart" class="cart-icon">
+        <div class="right">
+            <img src="assets/icons/shopping-cart-3.png" alt="Cart" class="cart">
         </div>
         
-        <!-- Наложенная надпись -->
-        <div class="main-title">
+        <div class="big-text">
             YOUR<br>PERSONALIZED<br>COFFEE
         </div>
-    </div>
+    </header>
 
-    <!-- Секция с иконками -->
-    <section class="hero-section">
-        <p class="hero-subtitle">Your Personalized Coffee</p>
-        <h2 class="hero-title">COFFEE BUILD YOUR BASE</h2>
-        
-        <div class="features">
-            <div class="feature-item">
-                <img src="assets/icons/IC (1).png" alt="Source" class="feature-icon">
-                <p class="feature-text">Nguồn cà phê chất lượng</p>
+    <main>
+        <section>
+            <h2>COFFEE BUILD YOUR BASE</h2>
+            <div class="icons">
+                <div>
+                    <img src="assets/icons/IC (1).png" alt="Icon 1" class="icon">
+                    <p>Quality</p>
+                </div>
+                <div>
+                    <img src="assets/icons/IC (2).png" alt="Icon 2" class="icon">
+                    <p>Brewing</p>
+                </div>
+                <div>
+                    <img src="assets/icons/IC (3).png" alt="Icon 3" class="icon">
+                    <p>Packaging</p>
+                </div>
+                <div>
+                    <img src="assets/icons/ic.png" alt="Icon 4" class="icon">
+                    <p>Perfection</p>
+                </div>
             </div>
-            <div class="feature-item">
-                <img src="assets/icons/IC (2).png" alt="Mix" class="feature-icon">
-                <p class="feature-text">Pha chế công phu</p>
-            </div>
-            <div class="feature-item">
-                <img src="assets/icons/IC (3).png" alt="Pack" class="feature-icon">
-                <p class="feature-text">Đóng gói cẩn thận</p>
-            </div>
-            <div class="feature-item">
-                <img src="assets/icons/ic.png" alt="Brew" class="feature-icon">
-                <p class="feature-text">Pha chế hoàn hảo</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Секция продуктов -->
-    <section class="products-section">
-        <div class="products-bg"></div>
-        <div class="products-content">
-            <h2 class="products-title">Choose Your Favorite</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="assets/img/image (1).png" alt="Product 1" class="product-image">
+        <section>
+            <h2>Choose Your Favorite</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="assets/img/image (1).png" alt="Product 1" class="product-img">
                     <p>REVO Morning</p>
                 </div>
-                <div class="product-card">
-                    <img src="assets/img/IMAGE (2).png" alt="Product 2" class="product-image">
+                <div class="product">
+                    <img src="assets/img/IMAGE (2).png" alt="Product 2" class="product-img">
                     <p>REVO Origin</p>
                 </div>
-                <div class="product-card">
-                    <img src="assets/img/IMAGE (3).png" alt="Product 3" class="product-image">
+                <div class="product">
+                    <img src="assets/img/IMAGE (3).png" alt="Product 3" class="product-img">
                     <p>REVO Everyday</p>
                 </div>
-                <div class="product-card">
-                    <img src="assets/img/IMAGE.png" alt="Product 4" class="product-image">
+                <div class="product">
+                    <img src="assets/img/IMAGE.png" alt="Product 4" class="product-img">
                     <p>REVO Bold</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Секция подарочных наборов -->
-    <section class="giftset-section">
-        <div class="giftset-bg"></div>
-        <div class="giftset-content">
-            <div class="giftset-text">
-                <h3 class="giftset-title">Best Gift For Best Friend</h3>
-                <h2 class="giftset-subtitle">GIFTSET</h2>
-            </div>
-            <img src="assets/img/pr-0018-r.png" alt="Gift Set" class="giftset-image">
-        </div>
-    </section>
-
-    <!-- Секция комбо -->
-    <section class="combo-section">
-        <div class="combo-bg"></div>
-        <div class="combo-content">
-            <h2 class="combo-title">Your Personalized Coffee</h2>
-            <div class="combo-grid">
-                <div class="combo-item">
-                    <img src="assets/img/image (6).png" alt="Combo 1" class="combo-image">
+        <section>
+            <h2>Your Personalized Coffee</h2>
+            <div class="combos">
+                <div>
+                    <img src="assets/img/image (6).png" alt="Combo 1" class="combo-img">
                     <p>Combo 1</p>
                 </div>
-                <div class="combo-item">
-                    <img src="assets/img/image (7).png" alt="Combo 2" class="combo-image">
+                <div>
+                    <img src="assets/img/image (7).png" alt="Combo 2" class="combo-img">
                     <p>Combo 2</p>
                 </div>
-                <div class="combo-item">
-                    <img src="assets/img/image (8).png" alt="Combo 3" class="combo-image">
+                <div>
+                    <img src="assets/img/image (8).png" alt="Combo 3" class="combo-img">
                     <p>Combo 3</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Футер -->
     <footer>
         <p>© Revo Coffee - 2018</p>
     </footer>
