@@ -4,203 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revo Coffee</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            color: #415167;
-        }
-        
-        header {
-            display: flex;
-            height: 500px;
-        }
-        
-        .left {
-            flex: 1;
-            background: white;
-        }
-        
-        .center {
-            flex: 1;
-            background: white;
-        }
-        
-        .right {
-            width: 200px;
-            background: #415167;
-        }
-        
-        .logo {
-            margin: 40px;
-            width: 80px;
-        }
-        
-        .main-img {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .cart {
-            margin: 40px;
-            width: 25px;
-        }
-        
-        .big-text {
-            position: absolute;
-            top: 200px;
-            right: 50px;
-            font-size: 40px;
-            font-weight: bold;
-            line-height: 1.2;
-        }
-        
-        main {
-            padding: 50px 20px;
-        }
-        
-        section {
-            margin: 50px 0;
-            text-align: center;
-        }
-        
-        h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-        
-        .icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-        
-        .icon {
-            width: 60px;
-            height: 60px;
-        }
-        
-        .products {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .product {
-            background: white;
-            padding: 15px;
-        }
-        
-        .product-img {
-            width: 100%;
-            height: 150px;
-        }
-        
-        .combos {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        .combo-img {
-            width: 120px;
-            height: 120px;
-        }
-        
-        footer {
-            background: #415167;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <div class="left">
-            <img src="assets/img/LOGO.png" alt="Logo" class="logo">
-        </div>
-        
-        <div class="center">
-            <img src="assets/img/Баннер.png" alt="Coffee" class="main-img">
-        </div>
-        
-        <div class="right">
-            <img src="assets/icons/shopping-cart-3.png" alt="Cart" class="cart">
-        </div>
-        
-        <div class="big-text">
-            YOUR<br>PERSONALIZED<br>COFFEE
+        <div style="display: flex; height: 400px;">
+            <div style="flex: 1; background: white;">
+                <img src="assets/img/LOGO.png" alt="Logo" style="margin: 30px; width: 60px;">
+            </div>
+            
+            <div style="flex: 1; background: white;">
+                <img src="assets/img/Баннер.png" alt="Coffee" style="width: 100%; height: 100%;">
+            </div>
+            
+            <div style="width: 150px; background: #415167;">
+                <img src="assets/icons/shopping-cart-3.png" alt="Cart" style="margin: 30px; width: 20px;">
+            </div>
+            
+            <div style="position: absolute; top: 150px; right: 30px; font-size: 30px; font-weight: bold; line-height: 1.2;">
+                YOUR<br>PERSONALIZED<br>COFFEE
+            </div>
         </div>
     </header>
 
-    <main>
-        <section>
-            <h2>COFFEE BUILD YOUR BASE</h2>
-            <div class="icons">
+    <main style="padding: 40px 20px;">
+        <section style="text-align: center; margin: 40px 0;">
+            <h2 style="font-size: 24px; margin-bottom: 20px;">COFFEE BUILD YOUR BASE</h2>
+            <div style="display: flex; justify-content: center; gap: 20px;">
                 <div>
-                    <img src="assets/icons/IC (1).png" alt="Icon 1" class="icon">
+                    <img src="assets/icons/IC (1).png" alt="Icon 1" style="width: 50px; height: 50px;">
                     <p>Quality</p>
                 </div>
                 <div>
-                    <img src="assets/icons/IC (2).png" alt="Icon 2" class="icon">
+                    <img src="assets/icons/IC (2).png" alt="Icon 2" style="width: 50px; height: 50px;">
                     <p>Brewing</p>
                 </div>
                 <div>
-                    <img src="assets/icons/IC (3).png" alt="Icon 3" class="icon">
+                    <img src="assets/icons/IC (3).png" alt="Icon 3" style="width: 50px; height: 50px;">
                     <p>Packaging</p>
                 </div>
                 <div>
-                    <img src="assets/icons/ic.png" alt="Icon 4" class="icon">
+                    <img src="assets/icons/ic.png" alt="Icon 4" style="width: 50px; height: 50px;">
                     <p>Perfection</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Choose Your Favorite</h2>
-            <div class="products">
-                <div class="product">
-                    <img src="assets/img/image (1).png" alt="Product 1" class="product-img">
+        <section style="text-align: center; margin: 40px 0;">
+            <h2 style="font-size: 24px; margin-bottom: 20px;">Choose Your Favorite</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 500px; margin: 0 auto;">
+                <div style="padding: 10px;">
+                    <img src="assets/img/image (1).png" alt="Product 1" style="width: 100%; height: 120px;">
                     <p>REVO Morning</p>
                 </div>
-                <div class="product">
-                    <img src="assets/img/IMAGE (2).png" alt="Product 2" class="product-img">
+                <div style="padding: 10px;">
+                    <img src="assets/img/IMAGE (2).png" alt="Product 2" style="width: 100%; height: 120px;">
                     <p>REVO Origin</p>
                 </div>
-                <div class="product">
-                    <img src="assets/img/IMAGE (3).png" alt="Product 3" class="product-img">
+                <div style="padding: 10px;">
+                    <img src="assets/img/IMAGE (3).png" alt="Product 3" style="width: 100%; height: 120px;">
                     <p>REVO Everyday</p>
                 </div>
-                <div class="product">
-                    <img src="assets/img/IMAGE.png" alt="Product 4" class="product-img">
+                <div style="padding: 10px;">
+                    <img src="assets/img/IMAGE.png" alt="Product 4" style="width: 100%; height: 120px;">
                     <p>REVO Bold</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Your Personalized Coffee</h2>
-            <div class="combos">
+        <section style="text-align: center; margin: 40px 0;">
+            <h2 style="font-size: 24px; margin-bottom: 20px;">Your Personalized Coffee</h2>
+            <div style="display: flex; justify-content: center; gap: 15px;">
                 <div>
-                    <img src="assets/img/image (6).png" alt="Combo 1" class="combo-img">
+                    <img src="assets/img/image (6).png" alt="Combo 1" style="width: 100px; height: 100px;">
                     <p>Combo 1</p>
                 </div>
                 <div>
-                    <img src="assets/img/image (7).png" alt="Combo 2" class="combo-img">
+                    <img src="assets/img/image (7).png" alt="Combo 2" style="width: 100px; height: 100px;">
                     <p>Combo 2</p>
                 </div>
                 <div>
-                    <img src="assets/img/image (8).png" alt="Combo 3" class="combo-img">
+                    <img src="assets/img/image (8).png" alt="Combo 3" style="width: 100px; height: 100px;">
                     <p>Combo 3</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer style="background: #415167; color: white; text-align: center; padding: 15px;">
         <p>© Revo Coffee - 2018</p>
     </footer>
 </body>
