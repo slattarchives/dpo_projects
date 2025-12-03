@@ -1,0 +1,348 @@
+/* ===== Сброс стилей ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Шрифты ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* ===== Утилиты ===== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ===== Главная навигация (якоря) ===== */
+.main-nav {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: #415167;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  background: #e0e0e0;
+  outline: 2px solid #415167;
+  outline-offset: 2px;
+}
+
+/* ===== Хедер ===== */
+.site-header {
+  position: relative;
+  height: 400px;
+}
+
+.site-header__container {
+  display: flex;
+  height: 100%;
+  background: white;
+  position: relative;
+}
+
+.site-header__logo {
+  flex: 1;
+  padding: 30px;
+}
+
+.site-header__logo img {
+  width: 60px;
+}
+
+.site-header__hero {
+  flex: 1;
+}
+
+.site-header__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.site-header__cart {
+  width: 150px;
+  background: #415167;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header__cart img {
+  width: 20px;
+}
+
+.site-header__slogan {
+  position: absolute;
+  top: 150px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #415167;
+}
+
+/* ===== Основной контент ===== */
+.main {
+  padding: 40px 20px;
+}
+
+/* Раздел: Features */
+.features {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.features__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #415167;
+}
+
+.features__list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.features__text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Раздел: Products */
+.products {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.products__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #415167;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.product-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.product-card__image {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card__name {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.product-card__desc {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.product-card__price {
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.product-card__btn {
+  background: #415167;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.product-card__btn:hover,
+.product-card__btn:focus {
+  background: #2c3a4a;
+  outline: 2px solid #415167;
+  outline-offset: 2px;
+}
+
+/* Раздел: Combos */
+.combos {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.combos__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #415167;
+}
+
+.combos__list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.combo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.combo-item__image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.combo-item__name {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Раздел: Gifts */
+.gifts {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.gifts__card {
+  position: relative;
+}
+
+.gifts__title {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #415167;
+}
+
+.gifts__desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.gifts__price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 16px;
+}
+
+.gifts__btn {
+  background: #2c5530;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-bottom: 16px;
+}
+
+.gifts__btn:hover,
+.gifts__btn:focus {
+  background: #1e3a22;
+  outline: 2px solid #2c5530;
+  outline-offset: 2px;
+}
+
+.gifts__meta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Footer */
+.site-footer {
+  background: #415167;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* ===== Плавная прокрутка к якорям ===== */
+html {
+  scroll-behavior: smooth;
+}
