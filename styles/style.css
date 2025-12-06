@@ -1,4 +1,4 @@
-/* ===== Сброс стилей ===== */
+/*Сброс стилей*/
 *,
 *::before,
 *::after {
@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* ===== Шрифты ===== */
+/*Шрифты*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body {
@@ -17,7 +17,7 @@ body {
   background-color: #fff;
 }
 
-/* ===== Утилиты ===== */
+/*Утилиты*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -31,12 +31,12 @@ body {
   overflow: hidden;
 }
 
-/* ===== Плавная прокрутка ===== */
+/*Плавная прокрутка*/
 html {
   scroll-behavior: smooth;
 }
 
-/* ===== Главная навигация (якоря) ===== */
+/*Главная навигация (якоря)*/
 .main-nav {
   padding: 10px 20px;
   background: #f5f5f5;
@@ -350,10 +350,8 @@ html {
   margin-top: 40px;
 }
 
-/* =================================== */
-/* ========== МЕДИАЗАПРОСЫ =========== */
-/* ========== Desktop First =========== */
-/* =================================== */
+/*МЕДИАЗАПРОСЫ*/
+/*Desktop First*/
 
 /* Ноутбуки и меньше (≤1199px) */
 @media (max-width: 1199px) {
