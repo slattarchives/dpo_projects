@@ -31,6 +31,11 @@ body {
   overflow: hidden;
 }
 
+/* ===== Плавная прокрутка ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== Главная навигация (якоря) ===== */
 .main-nav {
   padding: 10px 20px;
@@ -45,6 +50,7 @@ body {
   justify-content: center;
   gap: 20px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .main-nav__link {
@@ -146,6 +152,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 80px;
 }
 
 .features__icon {
@@ -259,6 +266,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 100px;
 }
 
 .combo-item__image {
@@ -342,7 +350,155 @@ body {
   margin-top: 40px;
 }
 
-/* ===== Плавная прокрутка к якорям ===== */
-html {
-  scroll-behavior: smooth;
+/* =================================== */
+/* ========== МЕДИАЗАПРОСЫ =========== */
+/* ========== Desktop First =========== */
+/* =================================== */
+
+/* Ноутбуки и меньше (≤1199px) */
+@media (max-width: 1199px) {
+  .site-header__slogan {
+    font-size: 26px;
+    right: 20px;
+    top: 140px;
+  }
+}
+
+/* Планшеты и меньше (≤991px) */
+@media (max-width: 991px) {
+  .site-header {
+    height: auto;
+  }
+
+  .site-header__container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .site-header__logo,
+  .site-header__hero,
+  .site-header__cart {
+    width: 100%;
+    flex: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .site-header__hero img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .site-header__cart {
+    background: #415167;
+    width: 100%;
+  }
+
+  .site-header__slogan {
+    position: static;
+    margin: 20px 0;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .products__grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .gifts {
+    padding: 15px;
+  }
+
+  .gifts__title {
+    font-size: 20px;
+  }
+
+  .gifts__price {
+    font-size: 20px;
+  }
+}
+
+/* Мобильные альбомные и меньше (≤767px) */
+@media (max-width: 767px) {
+  .main-nav__list {
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features__list {
+    gap: 16px;
+  }
+
+  .combos__list {
+    gap: 16px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-card__image {
+    height: 100px;
+  }
+
+  .product-card__name {
+    font-size: 14px;
+  }
+
+  .product-card__price {
+    font-size: 16px;
+  }
+
+  .gifts__meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* Мобильные портретные (≤575px) */
+@media (max-width: 575px) {
+  .products__grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .combos__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .combo-item {
+    margin: 10px 0;
+  }
+
+  .site-header__logo img {
+    width: 50px;
+  }
+
+  .site-header__hero img {
+    height: 160px;
+  }
+
+  .site-header__slogan {
+    font-size: 24px;
+  }
+}
+
+/* Очень маленькие экраны (≤399px) */
+@media (max-width: 399px) {
+  .product-card__btn,
+  .gifts__btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .gifts__price {
+    font-size: 18px;
+  }
+
+  .features__text,
+  .combo-item__name {
+    font-size: 12px;
+  }
 }
