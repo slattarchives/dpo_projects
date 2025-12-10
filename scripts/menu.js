@@ -17,7 +17,6 @@ function toggleMenu() {
   mainNav.classList.toggle('active');
   navOverlay.classList.toggle('active');
 
-  // Блокируем скролл
   document.body.style.overflow = newState ? 'hidden' : '';
 }
 
@@ -41,7 +40,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Закрытие при ресайзе (>768px)
+// Закрытие при ресайзе
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
     toggleMenu();
