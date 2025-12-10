@@ -1,0 +1,117 @@
+/* Планшеты и меньше (≤1024px) */
+@media (max-width: 1024px) {
+  .site-header__container {
+    padding: 0 15px;
+  }
+}
+
+/* Планшеты и мобильные (≤768px) */
+@media (max-width: 768px) {
+  /* Фиксированный header */
+  .site-header {
+    position: sticky;
+    top: 0;
+    height: auto;
+    z-index: 1000;
+  }
+
+  .site-header__container {
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-slogan {
+    position: static;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 26px;
+  }
+
+  /* Гамбургер */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Скрытие основной навигации и корзины */
+  .main-nav {
+    display: none;
+  }
+
+  .site-header__cart {
+    display: none;
+  }
+
+  /* Мобильное меню из menu.js */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    padding: 80px 20px 30px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.4s ease;
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  .main-nav.active {
+    right: 0;
+    display: block;
+  }
+
+  .main-nav__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav__link {
+    display: block;
+    padding: 16px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .main-nav__link:hover,
+  .main-nav__link:focus {
+    color: var(--color-primary);
+    padding-left: 10px;
+    background: transparent;
+  }
+
+  /* Grid → 1 колонка */
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .combos__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Кнопка "Наверх" */
+  .scroll-top {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+  }
+}
+
+/* Мобильные (≤480px) */
+@media (max-width: 480px) {
+  .hero-slogan {
+    font-size: 22px;
+  }
+
+  .product-card__btn,
+  .gifts__btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
