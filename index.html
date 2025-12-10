@@ -5,147 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Revo Coffee</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)" />
 </head>
 <body>
+  <!-- Навигация по якорям -->
+  <nav class="main-nav">
+    <ul class="main-nav__list">
+      <li class="main-nav__item"><a class="main-nav__link" href="#features">О нас</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#products">Кофе</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#combos">Наборы</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#gifts">Подарки</a></li>
+    </ul>
+  </nav>
+
   <header class="site-header">
     <div class="site-header__container">
-      <a href="#" class="site-header__logo-link" aria-label="На главную">
+      <div class="site-header__logo">
         <img src="assets/img/LOGO.png" alt="Revo Coffee Logo" />
-      </a>
-
-      <!-- Гамбургер-меню (появляется на мобильных) -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
-        <span class="menu-toggle__line"></span>
-        <span class="menu-toggle__line"></span>
-        <span class="menu-toggle__line"></span>
-      </button>
-
-      <!-- Основная навигация -->
-      <nav class="main-nav" id="mainNav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link" href="#features">О нас</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#products">Кофе</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#combos">Наборы</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#gifts">Подарки</a></li>
-        </ul>
-      </nav>
-
+      </div>
+      <div class="site-header__hero">
+        <img src="assets/img/Баннер.png" alt="Coffee beans" />
+      </div>
       <div class="site-header__cart">
         <img src="assets/icons/shopping-cart-3.png" alt="Корзина" />
       </div>
+      <div class="site-header__slogan">
+        YOUR<br />PERSONALIZED<br />COFFEE
+      </div>
     </div>
-
-    <!-- Слоган -->
-    <div class="hero-slogan">YOUR<br />PERSONALIZED<br />COFFEE</div>
   </header>
 
   <main class="main">
-    <!-- Features -->
     <section id="features" class="features">
       <h2 class="features__title">COFFEE BUILD YOUR BASE</h2>
       <div class="features__list">
         <div class="features__item">
-          <img src="assets/icons/IC (1).png" alt="Chất lượng" class="features__icon" />
-          <p class="features__text">Chất lượng</p>
+          <img src="assets/icons/IC (1).png" alt="Quality" class="features__icon" />
+          <p class="features__text">Quality</p>
         </div>
         <div class="features__item">
-          <img src="assets/icons/IC (2).png" alt="Pha chế" class="features__icon" />
-          <p class="features__text">Pha chế</p>
+          <img src="assets/icons/IC (2).png" alt="Brewing" class="features__icon" />
+          <p class="features__text">Brewing</p>
         </div>
         <div class="features__item">
-          <img src="assets/icons/IC (3).png" alt="Các loại hạt" class="features__icon" />
-          <p class="features__text">Các loại hạt</p>
+          <img src="assets/icons/IC (3).png" alt="Packaging" class="features__icon" />
+          <p class="features__text">Packaging</p>
         </div>
         <div class="features__item">
-          <img src="assets/icons/ic.png" alt="Nguồn gốc" class="features__icon" />
-          <p class="features__text">Nguồn gốc</p>
+          <img src="assets/icons/ic.png" alt="Perfection" class="features__icon" />
+          <p class="features__text">Perfection</p>
         </div>
       </div>
     </section>
 
-    <!-- Products -->
     <section id="products" class="products">
       <h2 class="products__title">Choose Your Favorite</h2>
       <div class="products__grid">
+        <!-- REVO Morning -->
         <div class="product-card">
           <img src="assets/img/image (1).png" alt="REVO Morning" class="product-card__image" />
           <h3 class="product-card__name">REVO Morning</h3>
-          <p class="product-card__desc">hậu ngọt, hương hoa</p>
-          <div class="product-card__price">99.000 ₫</div>
+          <p class="product-card__desc">бодрящий</p>
+          <div class="product-card__price">99.000 р</div>
           <button class="product-card__btn">КУПИТЬ</button>
         </div>
+
+        <!-- REVO Origin -->
         <div class="product-card">
           <img src="assets/img/IMAGE (2).png" alt="REVO Origin" class="product-card__image" />
           <h3 class="product-card__name">REVO Origin</h3>
-          <p class="product-card__desc">hậu ngọt, ít đắng, vị chua đầu</p>
-          <div class="product-card__price">139.000 ₫</div>
+          <p class="product-card__desc">оригинальный </p>
+          <div class="product-card__price">139.000 р</div>
           <button class="product-card__btn">КУПИТЬ</button>
         </div>
+
+        <!-- REVO Everyday -->
         <div class="product-card">
           <img src="assets/img/IMAGE (3).png" alt="REVO Everyday" class="product-card__image" />
           <h3 class="product-card__name">REVO Everyday</h3>
-          <p class="product-card__desc">cân bằng, hậu đắng, vị chocolate</p>
-          <div class="product-card__price">85.000 ₫</div>
+          <p class="product-card__desc">шоколадный привкус</p>
+          <div class="product-card__price">85.000 р</div>
           <button class="product-card__btn">КУПИТЬ</button>
         </div>
+
+        <!-- REVO Dam Da -->
         <div class="product-card">
-          <img src="assets/img/IMAGE.png" alt="REVO Đậm Đà" class="product-card__image" />
-          <h3 class="product-card__name">REVO Đậm Đà</h3>
-          <p class="product-card__desc">đậm đà, đắng, truyền thống</p>
-          <div class="product-card__price">75.000 ₫</div>
+          <img src="assets/img/IMAGE.png" alt="REVO Крепкий" class="product-card__image" />
+          <h3 class="product-card__name">REVO крепкий</h3>
+          <p class="product-card__desc">крепкий, темный</p>
+          <div class="product-card__price">75.000 р</div>
           <button class="product-card__btn">КУПИТЬ</button>
         </div>
       </div>
     </section>
 
-    <!-- Combos -->
     <section id="combos" class="combos">
       <h2 class="combos__title">Your Personalized Coffee</h2>
       <div class="combos__list">
         <div class="combo-item">
-          <img src="assets/img/image (6).png" alt="Combo Phin" class="combo-item__image" />
-          <p class="combo-item__name">Combo Phin</p>
+          <img src="assets/img/image (6).png" alt="Combo 1" class="combo-item__image" />
+          <p class="combo-item__name">Combo Brown</p>
         </div>
         <div class="combo-item">
-          <img src="assets/img/image (7).png" alt="Combo GIFTSET" class="combo-item__image" />
+          <img src="assets/img/image (7).png" alt="Combo 2" class="combo-item__image" />
           <p class="combo-item__name">Combo GIFTSET</p>
         </div>
         <div class="combo-item">
-          <img src="assets/img/image (8).png" alt="Combo Phin + Gift" class="combo-item__image" />
-          <p class="combo-item__name">Combo Phin + Gift</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gifts -->
-    <section id="gifts" class="gifts">
-      <div class="gifts__card">
-        <h3 class="gifts__title">Best Gift For Best Friend</h3>
-        <p class="gifts__desc">
-          Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cân trong chọn lựa,
-          rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng,
-          cùng với tình yêu, sự đam mê của người làm cà phê...
-        </p>
-        <div class="gifts__price">285.000 ₫</div>
-        <button class="gifts__btn">КУПИТЬ</button>
-        <div class="gifts__meta">
-          <span class="gifts__type">Fine Robusta Blend</span>
-          <span class="gifts__altitude">700–800 м</span>
+          <img src="assets/img/image (8).png" alt="Combo 3" class="combo-item__image" />
+          <p class="combo-item__name">Combo Brown + Gift</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Кнопка "Наверх" -->
-  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
-
-  <!-- Footer -->
   <footer class="site-footer">
     <p>© Revo Coffee — 2018</p>
   </footer>
-
-  <!-- Подключение JS -->
-  <script src="scripts/menu.js"></script>
 </body>
 </html>
