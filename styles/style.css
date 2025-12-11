@@ -470,7 +470,8 @@ html {
   }
 
   .site-header__hero img {
-    height: 160px;
+    /*height: 160px;*/
+    display: none;
   }
 
   .site-header__slogan {
@@ -585,7 +586,7 @@ html {
   transform: scale(0.95);
 }
 
-/*МЕДИАЗАПРОСЫ ДЛЯ Пр №5*/
+/*МЕДИАЗАПРОСЫ ДЛЯ МОБИЛОК*/
 
 /* Мобильные (≤768px) */
 @media (max-width: 768px) {
