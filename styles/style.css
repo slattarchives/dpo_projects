@@ -603,7 +603,7 @@ html {
     height: 100vh;
     background: white;
     padding: 80px 20px 30px;
-    box-shadow: -5px 0 15px rgba(35, 9, 9, 0.1);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     transition: right 0.4s ease;
     z-index: 100;
     overflow-y: auto;
