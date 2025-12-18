@@ -3,132 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Revo Coffee</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <title>FitLife Club — Фитнес с умом</title>
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+  <!-- Font Awesome (иконки) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    /* Минималистичные кастомизации */
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    .section {
+      padding: 4rem 1.5rem;
+    }
+    .is-spaced {
+      margin-bottom: 1.5rem;
+    }
+  </style>
 </head>
-
 <body>
-  <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
-    <span class="menu-toggle__line"></span>
-    <span class="menu-toggle__line"></span>
-    <span class="menu-toggle__line"></span>
-  </button>
-  <!-- Навигация по якорям -->
-  <nav class="main-nav" id="mainNav">
-    <ul class="main-nav__list">
-      <li class="main-nav__item"><a class="main-nav__link" href="#features">О нас</a></li>
-      <li class="main-nav__item"><a class="main-nav__link" href="#products">Кофе</a></li>
-      <li class="main-nav__item"><a class="main-nav__link" href="#combos">Наборы</a></li>
-      <li class="main-nav__item"><a class="main-nav__link" href="#gifts">Подарки</a></li>
-    </ul>
-  </nav>
 
-  <header class="site-header">
-    <div class="site-header__container">
-      <div class="site-header__logo">
-        <img src="assets/img/LOGO.png" alt="Revo Coffee Logo" />
-      </div>
-      <div class="site-header__hero">
-        <img src="assets/img/Баннер.png" alt="Coffee beans" />
-      </div>
-      <div class="site-header__cart">
-        <img src="assets/icons/shopping-cart-3.png" alt="Корзина" />
-      </div>
-      <div class="site-header__slogan">
-        YOUR<br />PERSONALIZED<br />COFFEE
+  <!-- Хедер -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <strong>FitLife</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#features">Преимущества</a>
+        <a class="navbar-item" href="#schedule">Расписание</a>
+        <a class="navbar-item" href="#pricing">Цены</a>
+        <a class="navbar-item" href="#contact">Контакты</a>
+        <a class="navbar-item button is-primary" href="#trial">Попробовать бесплатно</a>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="main">
-    <section id="features" class="features">
-      <h2 class="features__title">COFFEE BUILD YOUR BASE</h2>
-      <div class="features__list">
-        <div class="features__item">
-          <img src="assets/icons/IC (1).png" alt="Quality" class="features__icon" />
-          <p class="features__text">Quality</p>
+  <!-- Герой-секция -->
+  <section class="hero is-medium is-primary">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <h1 class="title is-1">Ваш путь к сильному телу и ясному разуму</h1>
+        <h2 class="subtitle is-4">Тренажёрный зал + групповые тренировки (HIIT, йога, пилатес)</h2>
+        <a href="#trial" class="button is-white is-large"><i class="fas fa-dumbbell"></i> Попробовать бесплатно</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered mb-6">Почему выбирают нас</h2>
+      <div class="columns is-multiline">
+        <div class="column is-6-tablet is-3-desktop has-text-centered">
+          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3 class="title is-5 mt-3">Сертифицированные тренеры</h3>
         </div>
-        <div class="features__item">
-          <img src="assets/icons/IC (2).png" alt="Brewing" class="features__icon" />
-          <p class="features__text">Brewing</p>
+        <div class="column is-6-tablet is-3-desktop has-text-centered">
+          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3 class="title is-5 mt-3">Гибкое расписание</h3>
         </div>
-        <div class="features__item">
-          <img src="assets/icons/IC (3).png" alt="Packaging" class="features__icon" />
-          <p class="features__text">Packaging</p>
+        <div class="column is-6-tablet is-3-desktop has-text-centered">
+          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <h3 class="title is-5 mt-3">Современное оборудование</h3>
         </div>
-        <div class="features__item">
-          <img src="assets/icons/ic.png" alt="Perfection" class="features__icon" />
-          <p class="features__text">Perfection</p>
+        <div class="column is-6-tablet is-3-desktop has-text-centered">
+          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+            <i class="fas fa-shower"></i>
+          </div>
+          <h3 class="title is-5 mt-3">Душ и раздевалки</h3>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="products" class="products">
-      <h2 class="products__title">Choose Your Favorite</h2>
-      <div class="products__grid">
-        <!-- REVO Morning -->
-        <div class="product-card">
-          <img src="assets/img/image (1).png" alt="REVO Morning" class="product-card__image" />
-          <h3 class="product-card__name">REVO Morning</h3>
-          <p class="product-card__desc">бодрящий</p>
-          <div class="product-card__price">99.000 р</div>
-          <button class="product-card__btn">КУПИТЬ</button>
+  <!-- Расписание -->
+  <section id="schedule" class="section has-background-light">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered mb-6">Групповые тренировки</h2>
+      <div class="table-container">
+        <table class="table is-fullwidth is-striped is-hoverable">
+          <thead>
+            <tr>
+              <th>Время</th>
+              <th>Пн</th>
+              <th>Ср</th>
+              <th>Пт</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>18:00</td>
+              <td>HIIT</td>
+              <td>Йога</td>
+              <td>Пилатес</td>
+            </tr>
+            <tr>
+              <td>19:30</td>
+              <td>Силовая</td>
+              <td>Йога</td>
+              <td>HIIT</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цены -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered mb-6">Тарифы</h2>
+      <div class="columns is-multiline is-centered">
+        <div class="column is-10-tablet is-4-desktop">
+          <div class="box has-text-centered">
+            <p class="title is-4">Пробное занятие</p>
+            <p class="subtitle is-5">0 ₽</p>
+            <ul class="mb-4">
+              <li>1 групповая тренировка</li>
+              <li>Консультация тренера</li>
+            </ul>
+            <a href="#trial" class="button is-primary">Записаться</a>
+          </div>
         </div>
-
-        <!-- REVO Origin -->
-        <div class="product-card">
-          <img src="assets/img/IMAGE (2).png" alt="REVO Origin" class="product-card__image" />
-          <h3 class="product-card__name">REVO Origin</h3>
-          <p class="product-card__desc">оригинальный </p>
-          <div class="product-card__price">139.000 р</div>
-          <button class="product-card__btn">КУПИТЬ</button>
-        </div>
-
-        <!-- REVO Everyday -->
-        <div class="product-card">
-          <img src="assets/img/IMAGE (3).png" alt="REVO Everyday" class="product-card__image" />
-          <h3 class="product-card__name">REVO Everyday</h3>
-          <p class="product-card__desc">шоколадный привкус</p>
-          <div class="product-card__price">85.000 р</div>
-          <button class="product-card__btn">КУПИТЬ</button>
-        </div>
-
-        <!-- REVO Dam Da -->
-        <div class="product-card">
-          <img src="assets/img/IMAGE.png" alt="REVO Крепкий" class="product-card__image" />
-          <h3 class="product-card__name">REVO крепкий</h3>
-          <p class="product-card__desc">крепкий, темный</p>
-          <div class="product-card__price">75.000 р</div>
-          <button class="product-card__btn">КУПИТЬ</button>
+        <div class="column is-10-tablet is-4-desktop">
+          <div class="box has-text-centered">
+            <p class="title is-4">8 занятий</p>
+            <p class="subtitle is-5">3 200 ₽</p>
+            <ul class="mb-4">
+              <li>Любые групповые</li>
+              <li>Действует 30 дней</li>
+            </ul>
+            <a href="#trial" class="button is-primary">Купить</a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="combos" class="combos">
-      <h2 class="combos__title">Your Personalized Coffee</h2>
-      <div class="combos__list">
-        <div class="combo-item">
-          <img src="assets/img/image (6).png" alt="Combo 1" class="combo-item__image" />
-          <p class="combo-item__name">Combo Brown</p>
-        </div>
-        <div class="combo-item">
-          <img src="assets/img/image (7).png" alt="Combo 2" class="combo-item__image" />
-          <p class="combo-item__name">Combo GIFTSET</p>
-        </div>
-        <div class="combo-item">
-          <img src="assets/img/image (8).png" alt="Combo 3" class="combo-item__image" />
-          <p class="combo-item__name">Combo Brown + Gift</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- Контакты -->
+  <section id="contact" class="section has-background-primary has-text-white">
+    <div class="container has-text-centered">
+      <h2 class="title is-2">Готовы начать?</h2>
+      <p class="subtitle is-4">Запишитесь на пробную тренировку прямо сейчас</p>
+      <a id="trial" href="https://wa.me/79991234567" class="button is-white is-large mt-4">
+        <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+      </a>
+      <p class="mt-4">📍 ул. Спортивная, 15, метро «Стадион»</p>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <p>© Revo Coffee — 2018</p>
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>FitLife Club</strong> — фитнес с умом. © 2025
+      </p>
+      <p>
+        <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="mx-2"><i class="fab fa-telegram"></i></a>
+        <a href="#" class="mx-2"><i class="fab fa-whatsapp"></i></a>
+      </p>
+    </div>
   </footer>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+  <!-- JS для гамбургера (обязательно для Bulma) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll('.navbar-burger'),
+        0
+      );
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
 
-  <script src="scripts/menu.js"></script>
 </body>
 </html>
