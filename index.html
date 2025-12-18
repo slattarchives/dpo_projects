@@ -3,31 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FitLife Club — Фитнес с умом</title>
+  <title>Pink Puff Club — Где тренировки мягкие, а результаты — упругие</title>
   <!-- Bulma CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
-  <!-- Font Awesome (иконки) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <style>
-    /* Минималистичные кастомизации */
+    /* Пастельные цвета */
+    :root {
+      --primary: #FFD1DC;
+      --accent: #FFB6C1;
+      --bg: #FFF0F5;
+      --text: #333;
+      --btn: #FF8AAE;
+    }
+
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
     }
+
+    /* Увеличиваем отступы */
     .section {
-      padding: 4rem 1.5rem;
+      padding: 5rem 1.5rem !important;
     }
-    .is-spaced {
-      margin-bottom: 1.5rem;
+
+    /* Плавные края */
+    .box, .hero, .card, .button {
+      border-radius: 1.5rem !important;
+    }
+
+    /* Плавные линии — добавляем волну */
+    .wave {
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom, var(--bg) 50%, var(--primary) 50%);
+      clip-path: url(#wave);
+      margin-top: -1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Кастомизация кнопок */
+    .button.is-primary {
+      background-color: var(--btn);
+      border: none;
+      box-shadow: 0 4px 12px rgba(255, 138, 174, 0.3);
+    }
+    .button.is-primary:hover {
+      background-color: #FF6B9D;
+      transform: scale(1.05);
+    }
+    .button.is-primary:active {
+      transform: scale(0.98);
+    }
+
+    /* Стиль навигации */
+    .navbar {
+      background-color: var(--primary);
+      box-shadow: 0 2px 10px rgba(255, 209, 220, 0.5);
+    }
+    .navbar-item {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .navbar-item:hover {
+      color: var(--btn);
+    }
+
+    /* Герой-секция */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+    }
+
+    /* Карточки преимуществ */
+    .feature-card {
+      background: white;
+      box-shadow: 0 4px 12px rgba(255, 209, 220, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Футер */
+    .footer {
+      background-color: var(--primary);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .footer a {
+      color: var(--text);
+      font-size: 1.5rem;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+    }
+    .footer a:hover {
+      color: var(--btn);
     }
   </style>
 </head>
 <body>
 
+  <!-- Волнистая SVG-линия -->
+  <svg width="0" height="0">
+    <defs>
+      <clipPath id="wave" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.2 C0.25,0.1 0.5,0.3 0.75,0.1 C1,0.05 1,0.3 1,0.3 L1,1 L0,1 Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
   <!-- Хедер -->
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
-        <strong>FitLife</strong>
+        <strong>Pink Puff Club</strong>
       </a>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -47,15 +139,18 @@
   </nav>
 
   <!-- Герой-секция -->
-  <section class="hero is-medium is-primary">
+  <section class="hero is-medium">
     <div class="hero-body has-text-centered">
       <div class="container">
-        <h1 class="title is-1">Ваш путь к сильному телу и ясному разуму</h1>
-        <h2 class="subtitle is-4">Тренажёрный зал + групповые тренировки (HIIT, йога, пилатес)</h2>
+        <h1 class="title is-1">Ваш путь к упругому телу и нежному настроению</h1>
+        <h2 class="subtitle is-4">Групповые тренировки, которые не напрягают</h2>
         <a href="#trial" class="button is-white is-large"><i class="fas fa-dumbbell"></i> Попробовать бесплатно</a>
       </div>
     </div>
   </section>
+
+  <!-- Волна -->
+  <div class="wave"></div>
 
   <!-- Преимущества -->
   <section id="features" class="section">
@@ -63,28 +158,32 @@
       <h2 class="title is-2 has-text-centered mb-6">Почему выбирают нас</h2>
       <div class="columns is-multiline">
         <div class="column is-6-tablet is-3-desktop has-text-centered">
-          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+          <div class="icon is-large" style="font-size: 2.5rem; color: var(--btn);">
             <i class="fas fa-heartbeat"></i>
           </div>
-          <h3 class="title is-5 mt-3">Сертифицированные тренеры</h3>
+          <h3 class="title is-5 mt-3">Мягкие тренеры</h3>
+          <p class="mt-2">Никакого крика — только поддержка и забота.</p>
         </div>
         <div class="column is-6-tablet is-3-desktop has-text-centered">
-          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+          <div class="icon is-large" style="font-size: 2.5rem; color: var(--btn);">
             <i class="fas fa-calendar-alt"></i>
           </div>
           <h3 class="title is-5 mt-3">Гибкое расписание</h3>
+          <p class="mt-2">Занимайтесь, когда вам удобно — даже в 10 утра по воскресеньям.</p>
         </div>
         <div class="column is-6-tablet is-3-desktop has-text-centered">
-          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+          <div class="icon is-large" style="font-size: 2.5rem; color: var(--btn);">
             <i class="fas fa-dumbbell"></i>
           </div>
-          <h3 class="title is-5 mt-3">Современное оборудование</h3>
+          <h3 class="title is-5 mt-3">Уютное оборудование</h3>
+          <p class="mt-2">Плюшевые коврики, мягкие гантели, дружелюбные тренажёры.</p>
         </div>
         <div class="column is-6-tablet is-3-desktop has-text-centered">
-          <div class="icon is-large" style="font-size: 2.5rem; color: #3273dc;">
+          <div class="icon is-large" style="font-size: 2.5rem; color: var(--btn);">
             <i class="fas fa-shower"></i>
           </div>
           <h3 class="title is-5 mt-3">Душ и раздевалки</h3>
+          <p class="mt-2">С ароматом ванили и мягкими полотенцами.</p>
         </div>
       </div>
     </div>
@@ -107,15 +206,15 @@
           <tbody>
             <tr>
               <td>18:00</td>
-              <td>HIIT</td>
-              <td>Йога</td>
-              <td>Пилатес</td>
+              <td>Нежный HIIT</td>
+              <td>Йога «Облако»</td>
+              <td>Пилатес «Плюш»</td>
             </tr>
             <tr>
               <td>19:30</td>
-              <td>Силовая</td>
-              <td>Йога</td>
-              <td>HIIT</td>
+              <td>Силовая «Мягкий подход»</td>
+              <td>Йога «Облако»</td>
+              <td>Нежный HIIT</td>
             </tr>
           </tbody>
         </table>
@@ -129,7 +228,7 @@
       <h2 class="title is-2 has-text-centered mb-6">Тарифы</h2>
       <div class="columns is-multiline is-centered">
         <div class="column is-10-tablet is-4-desktop">
-          <div class="box has-text-centered">
+          <div class="box has-text-centered feature-card">
             <p class="title is-4">Пробное занятие</p>
             <p class="subtitle is-5">0 ₽</p>
             <ul class="mb-4">
@@ -140,7 +239,7 @@
           </div>
         </div>
         <div class="column is-10-tablet is-4-desktop">
-          <div class="box has-text-centered">
+          <div class="box has-text-centered feature-card">
             <p class="title is-4">8 занятий</p>
             <p class="subtitle is-5">3 200 ₽</p>
             <ul class="mb-4">
@@ -170,17 +269,16 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>FitLife Club</strong> — фитнес с умом. © 2025
+        <strong>Pink Puff Club</strong> — где тренировки мягкие, а результаты — упругие. © 2025
       </p>
       <p>
-        <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="mx-2"><i class="fab fa-telegram"></i></a>
-        <a href="#" class="mx-2"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:pinkypie@yahoo.com" class="mx-2"><i class="fas fa-envelope"></i></a>
+        <a href="https://t.me/slattarchives" class="mx-2"><i class="fab fa-telegram"></i></a>
       </p>
     </div>
   </footer>
 
-  <!-- JS для гамбургера (обязательно для Bulma) -->
+  <!-- JS для гамбургера -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const $navbarBurgers = Array.prototype.slice.call(
