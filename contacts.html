@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Контакты — Pink Puff Club</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title is-2">Связаться с нами</h1>
+
+    <div class="columns">
+      <div class="column is-6">
+        <form>
+          <div class="field">
+            <label class="label">Имя</label>
+            <input class="input" type="text" required>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <input class="input" type="email" required>
+          </div>
+
+          <div class="field">
+            <label class="label">Тема</label>
+            <div class="select is-fullwidth">
+              <select required>
+                <option disabled selected>Выберите тему</option>
+                <option>Вопрос</option>
+                <option>Отзыв</option>
+                <option>Запись на тренировку</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Сообщение</label>
+            <textarea class="textarea" required></textarea>
+          </div>
+
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" required>
+              Согласен на обработку данных
+            </label>
+          </div>
+
+          <button class="button is-primary">Отправить</button>
+        </form>
+      </div>
+
+      <div class="column is-6 content">
+        <h3 class="title is-4">Контакты</h3>
+        <p>📍 ул. Спортивная, 15</p>
+        <p>📞 +7 (916) 588-13-61</p>
+        <p>✉️ pinkypie@yahoo.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
