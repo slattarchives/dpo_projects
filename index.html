@@ -17,13 +17,15 @@
   <style>
     :root {
       --pink-soft: #FFD1DC;
-      --pink-accent: #FF9EB5;
-      --beige: #FFF6EE;
-      --cream: #FFF9F4;
-      --lilac: #E6D9FF;
-      --text-main: #2b2226;
-      --text-soft: #6b5c63;
-      --btn: #FF8AAE;
+      --pink-accent: #FF7FA2;
+      --beige: #FFF3E8;
+      --cream: #FFFFFF;
+      --lilac: #DCCBFF;
+
+      --text-main: #1f1a1d;
+      --text-soft: #4f3f46;
+
+      --btn: #FF5F8A;
     }
 
     html { scroll-behavior: smooth; }
@@ -45,9 +47,17 @@
 
     /* ================= ANIMATION ================= */
     .section {
-      padding: 5rem 1.5rem;
-      animation: fadeUp 0.8s ease both;
+      padding: 7rem 1.5rem;
     }
+
+    .section-light {
+      background: var(--beige);
+    }
+
+    .section-dark {
+      background: linear-gradient(135deg, var(--pink-soft), var(--lilac));
+    }
+
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -227,34 +237,33 @@
     }
 
     body.dark {
-      background: #1f1b1d;
-      color: #f5e9ee;
+      background: #141114;
+      color: #ffffff;
+    }
+
+    body.dark .title,
+    body.dark .subtitle,
+    body.dark p {
+      color: #ffffff !important;
     }
 
     body.dark .plush-card,
     body.dark .schedule-card {
-      background: #2b2428;
-      color: #f5e9ee;
+      background: #241e22;
+      color: #ffffff;
     }
 
     body.dark .navbar,
     body.dark .footer {
-      background: #2b2428;
+      background: #241e22;
     }
+
 
 
   </style>
 </head>
 
-<script>
-const toggle = document.getElementById('themeToggle');
 
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  toggle.textContent =
-    document.body.classList.contains('dark') ? '☀️' : '🌙';
-});
-</script>
 
 
 <body>
@@ -300,7 +309,7 @@ toggle.addEventListener('click', () => {
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="section">
+<section id="features" class="section section-light">
   <div class="container">
     <h2 class="title is-2 has-text-centered mb-6">Почему мы такие уютные</h2>
     <div class="columns is-multiline">
@@ -337,31 +346,43 @@ toggle.addEventListener('click', () => {
 </section>
 
 <!-- GALLERY -->
-<section class="section">
+<section class="section section-dark">
   <div class="container">
     <h2 class="title is-2 has-text-centered mb-6">Наши счастливые клиенты</h2>
 
-    <div class="columns is-multiline gallery">
+    <!-- Верхний ряд -->
+    <div class="columns is-centered gallery mb-6">
       <div class="column is-4">
-        <img src="https://picsum.photos/400/300?1" loading="lazy" alt="Тренировка">
+        <img src="assets/img/хомяк.png" loading="lazy" alt="Тренировка">
       </div>
       <div class="column is-4">
-        <img src="https://picsum.photos/400/300?2" loading="lazy" alt="Зал">
-      </div>
-      <div class="column is-4">
-        <img src="https://picsum.photos/400/300?3" loading="lazy" alt="Клиенты">
+        <img src="assets/img/зал.png" loading="lazy" alt="Зал">
       </div>
     </div>
 
-    <p class="has-text-centered mt-4 subtitle">
+    <!-- Нижний ряд -->
+    <div class="columns is-multiline gallery">
+      <div class="column is-4">
+        <img src="assets/img/мышь с бантиками.png" loading="lazy" alt="Клиент">
+      </div>
+      <div class="column is-4">
+        <img src="assets/img/we go gim.png" loading="lazy" alt="Клиент">
+      </div>
+      <div class="column is-4">
+        <img src="assets/img/на стероидах.png" loading="lazy" alt="Клиент">
+      </div>
+    </div>
+
+    <p class="has-text-centered mt-5 subtitle">
       🎥 Видео-отзывы доступны в наших соцсетях
     </p>
   </div>
 </section>
 
 
+
 <!-- SCHEDULE -->
-<section id="schedule" class="section">
+<section id="schedule" class="section section-light">
   <div class="container">
     <h2 class="title is-2 has-text-centered mb-6">Расписание</h2>
     <div class="schedule-grid">
@@ -382,7 +403,7 @@ toggle.addEventListener('click', () => {
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="section">
+<section id="pricing" class="section section-dark">
   <div class="container">
     <h2 class="title is-2 has-text-centered mb-6">Тарифы</h2>
     <div class="columns is-centered">
@@ -412,7 +433,7 @@ toggle.addEventListener('click', () => {
 </section>
 
 <!-- CONTACT -->
-<section id="trial" class="section has-text-centered">
+<section id="trial" class="section section-light has-text-centered">
   <h2 class="title is-2">Готовы начать?</h2>
   <a href="https://wa.me/79165881361" class="button is-primary is-large mt-4">
     <i class="fab fa-whatsapp"></i> Написать в WhatsApp
@@ -437,6 +458,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('themeToggle');
+
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    toggle.textContent =
+      document.body.classList.contains('dark') ? '☀️' : '🌙';
+  });
+});
+</script>
+
 
 </body>
 </html>
