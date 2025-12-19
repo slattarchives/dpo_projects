@@ -2,31 +2,101 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — Pink Puff Club</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    :root {
+      --primary: #FF8AAE;
+      --light-pink: #FFD1DC;
+      --bg: #FFF0F5;
+      --text: #333;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      padding-top: 4rem;
+    }
+
+    .section {
+      padding: 5rem 1.5rem !important;
+    }
+
+    details, summary, .title {
+      border-radius: 1.2rem !important;
+    }
+
+    summary {
+      background-color: white;
+      padding: 1.2rem 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      border: 2px solid var(--light-pink);
+      border-radius: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    summary:hover {
+      background-color: var(--light-pink);
+      transform: translateY(-2px);
+    }
+
+    details[open] > summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: 2px solid var(--light-pink);
+    }
+
+    details p {
+      background-color: white;
+      padding: 1.5rem;
+      margin-top: -2px;
+      border: 2px solid var(--light-pink);
+      border-top: none;
+      border-radius: 0 0 1.2rem 1.2rem;
+      line-height: 1.6;
+    }
+
+    .wave-divider {
+      height: 40px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z' fill='%23FFD1DC'/%3E%3C/svg%3E") repeat-x;
+      background-size: contain;
+      margin: 3rem auto;
+    }
+  </style>
 </head>
 <body>
 
-<section class="section">
-  <div class="container">
-    <h1 class="title is-2">Часто задаваемые вопросы</h1>
+  <section class="section">
+    <div class="container">
+      <h1 class="title is-2 has-text-centered" style="color: var(--primary); margin-bottom: 3rem;">
+        Часто задаваемые вопросы 💕
+      </h1>
 
-    <details class="mb-4">
-      <summary><strong>Нужно ли быть в форме?</strong></summary>
-      <p>Нет 💗 мы начинаем мягко и постепенно.</p>
-    </details>
+      <details class="mb-5">
+        <summary>Нужно ли быть в форме?</summary>
+        <p>Нет 💗 мы начинаем мягко и постепенно.</p>
+      </details>
 
-    <details class="mb-4">
-      <summary><strong>Можно ли прийти без опыта?</strong></summary>
-      <p>Да, 90% наших клиентов — новички.</p>
-    </details>
+      <details class="mb-5">
+        <summary>Можно ли прийти без опыта?</summary>
+        <p>Да, 90% наших клиентов — новички.</p>
+      </details>
 
-    <details>
-      <summary><strong>Что взять с собой?</strong></summary>
-      <p>Удобную одежду и хорошее настроение ☁️</p>
-    </details>
-  </div>
-</section>
+      <details>
+        <summary>Что взять с собой?</summary>
+        <p>Удобную одежду и хорошее настроение ☁️</p>
+      </details>
+
+
+      <div class="wave-divider"></div>
+    </div>
+  </section>
 
 </body>
 </html>
