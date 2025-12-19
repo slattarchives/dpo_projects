@@ -4,15 +4,48 @@
   <meta charset="UTF-8">
   <title>404 — Pink Puff Club</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <style>
+    .button.is-rose {
+      background-color: #FF8AAE;
+      border: none;
+      border-radius: 1.5rem;
+      color: white;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(255, 138, 174, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .button.is-rose:hover {
+      background-color: #FF6B9D;
+      transform: scale(1.03);
+    }
+
+    .button.is-rose:active {
+      transform: scale(0.98);
+    }
+
+    body {
+      background-color: #FFF0F5;
+      padding-top: 4rem;
+    }
+
+    .section {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body class="has-text-centered">
 
-<section class="section">
-  <h1 class="title is-1">404</h1>
-  <p class="subtitle">Кажется, вы улетели на облачке ☁️</p>
-
-  <a href="index.html" class="button is-primary mt-4">На главную</a>
-</section>
+  <section class="section">
+    <h1 class="title is-1" style="color: #FF8AAE;">404</h1>
+    <p class="subtitle">Кажется, вы улетели на облачке ☁️</p>
+    <a href="index.html" class="button is-rose mt-4">На главную</a>
+  </section>
 
 </body>
 </html>
