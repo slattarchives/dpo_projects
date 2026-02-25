@@ -79,42 +79,43 @@
 
       <div class="columns is-centered">
         <div class="column is-6">
-          <form>
+          <!-- Добавляем ID к форме -->
+          <form id="contactForm">
             <div class="field">
-              <label class="label">Имя</label>
-              <input class="input" type="text" required>
+              <label class="label">Имя<span class="has-text-danger">*</span></label>
+              <input class="input" type="text" id="name" required>
             </div>
 
             <div class="field">
-              <label class="label">Email</label>
-              <input class="input" type="email" required>
+              <label class="label">Email<span class="has-text-danger">*</span></label>
+              <input class="input" type="email" id="email" required>
             </div>
 
             <div class="field">
-              <label class="label">Тема</label>
+              <label class="label">Тема<span class="has-text-danger">*</span></label>
               <div class="select is-fullwidth">
-                <select required>
-                  <option disabled selected>Выберите тему</option>
-                  <option>Вопрос</option>
-                  <option>Отзыв</option>
-                  <option>Запись на тренировку</option>
+                <select id="subject" required>
+                  <option value="">Выберите тему</option>
+                  <option value="question">Вопрос</option>
+                  <option value="feedback">Отзыв</option>
+                  <option value="booking">Запись на тренировку</option>
                 </select>
               </div>
             </div>
 
             <div class="field">
               <label class="label">Сообщение</label>
-              <textarea class="textarea" rows="4" required></textarea>
+              <textarea class="textarea" id="message" rows="4"></textarea>
             </div>
 
             <div class="field">
               <label class="checkbox">
-                <input type="checkbox" required>
+                <input type="checkbox" id="agreement" required>
                 Согласен на обработку данных
               </label>
             </div>
 
-            <button class="button is-primary">Отправить</button>
+            <button class="button is-primary" type="submit">Отправить</button>
           </form>
         </div>
 
@@ -132,5 +133,8 @@
     </div>
   </section>
 
+  <!-- Подключение скриптов -->
+  <script src="scripts/validation.js"></script>
+  <script src="scripts/consoleLogger.js"></script>
 </body>
 </html>
