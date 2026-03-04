@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   hiUserBtn.addEventListener('click', function () { 
     const nameValue = userNameInput.value.trim();
     const newItem = document.createElement('li');
-    newItem.textContent = 'Привет, ${nameValue}!';
+    newItem.textContent = `Привет, ${nameValue}!`;
 
     greeting.appendChild(newItem);
 
