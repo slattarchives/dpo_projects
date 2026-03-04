@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   addUserBtn.addEventListener('click', function () {
     counter = counter + 1;
   });
-
+  
   //№2: Работа с селекторами
   const textElements = document.querySelectorAll('.text');
   console.log('Найдено элементов с классом "text":', textElements.length);
