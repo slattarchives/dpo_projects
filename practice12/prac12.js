@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
   //№1: Генерация списка
-  const containeR = document.getElementById('containeR');
+  const counterElement = document.getElementById('counter');
   const addUserBtn = document.getElementById('addUserBtn');
   let counter = 0;
 
-  const title = document.createElement('h1');
-  title.textContent = 'Список пользователей';
-  title.style.color = '#FF8AAE';
-  title.style.marginBottom = '1rem';
+  counterElement.textContent = counter;
 
   addUserBtn.addEventListener('click', function () {
     counter = counter + 1;
+    counterElement.textContent = counter;
   });
-  
+
   //№2: Работа с селекторами
   const textElements = document.querySelectorAll('.text');
   console.log('Найдено элементов с классом "text":', textElements.length);
