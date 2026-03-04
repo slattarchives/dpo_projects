@@ -11,23 +11,21 @@ document.addEventListener('DOMContentLoaded', function () {
     counterElement.textContent = counter;
   });
 
-  //№2: Работа с селекторами
-  const textElements = document.querySelectorAll('.text');
-  console.log('Найдено элементов с классом "text":', textElements.length);
+  //№2: Приветствие
+  const hiUserBtn = document.getElementById('hiUserBtn');
+  const userNameInput = document.getElementById('name');
+  const greeting = document.getElementById('Greeting');
 
-  const specialElement = document.querySelector('.special');
-  if (specialElement) {
-    specialElement.classList.add('red-text');
-  }
 
-  if (textElements.length >= 3) {
-    textElements[2].classList.add('bg-green'); // индекс 2 = третий элемент
-  }
+  hiUserBtn.addEventListener('click', function () { 
+    const nameValue = userNameInput.value.trim();
+    const newItem = document.createElement('li');
+    newItem.textContent = 'Привет, ${userName.value}!';
 
-  const container = document.getElementById('container');
-  if (container) {
-    container.classList.add('border-container');
-  }
+    greeting.appendChild(newItem);
+
+    userNameInput.value = '';
+  });
 
 
   //№3: Data-атрибуты и вычисления
