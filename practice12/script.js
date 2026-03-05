@@ -28,35 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  //№3: Data-атрибуты и вычисления
-  const items = document.querySelectorAll('.item');
-  console.log('Найдено товаров:', items.length);
+  //№3: Переключатель темы
+  const toggle = document.getElementById('themeToggle');
 
-  const activeItem = document.querySelector('.item.active');
-  if (activeItem) {
-    activeItem.classList.add('highlight');
-  }
-
-  let total = 0;
-  let maxPrice = 0;
-  let maxItem = null;
-
-  items.forEach(item => {
-    const price = Number(item.dataset.price);
-    total += price;
-    
-    if (price > maxPrice) {
-      maxPrice = price;
-      maxItem = item;
-    }
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    toggle.textContent =
+      document.body.classList.contains('dark') ? '☀️' : '🌙';
   });
-
-  console.log('Суммарная стоимость:', total, '₽');
-  console.log('Самый дорогой товар:', maxItem ? maxItem.textContent : 'не найден', '—', maxPrice, '₽');
-
-  const resultDiv = document.getElementById('calcResult');
-  resultDiv.innerHTML = `
-    Суммарная стоимость: <strong>${total} ₽</strong><br>
-    Самый дорогой товар: <strong>${maxItem ? maxItem.textContent : '—'}</strong> (${maxPrice} ₽)
-  `;
+  
 });
