@@ -12,6 +12,7 @@
       padding: 2rem;
       max-width: 1000px;
       margin: 0 auto;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     .section {
       background: white;
@@ -19,33 +20,13 @@
       padding: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 4px 12px rgba(255, 138, 174, 0.2);
+      transition: background-color 0.3s ease;
     }
     .section h2 {
       color: #FF8AAE;
       margin-bottom: 1.5rem;
       border-bottom: 2px solid #FFD1DC;
       padding-bottom: 0.5rem;
-    }
-    .border-container {
-      border: 2px solid #333;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      margin-top: 1rem;
-    }
-    .bg-green {
-      background-color: lightgreen;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-    }
-    .red-text {
-      color: red;
-      font-weight: bold;
-    }
-    .highlight {
-      background-color: #FFF9C4;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      font-weight: bold;
     }
     button {
       background-color: #FF8AAE;
@@ -57,6 +38,7 @@
       cursor: pointer;
       transition: all 0.2s ease;
       margin-top: 1rem;
+      margin-right: 0.5rem;
     }
     button:hover {
       background-color: #FF6B9D;
@@ -71,12 +53,55 @@
       margin-bottom: 0.5rem;
       background: #FFF0F5;
       border-radius: 0.8rem;
+      animation: popIn 0.3s ease-out;
     }
-    .item {
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      background: #F8F8F8;
-      border-radius: 0.8rem;
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    input[type="text"] {
+      padding: 0.75rem;
+      border: 2px solid #FFD1DC;
+      border-radius: 1rem;
+      margin-right: 0.5rem;
+      font-size: 1rem;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #FF8AAE;
+      box-shadow: 0 0 0 3px rgba(255, 138, 174, 0.2);
+    }
+    .switcher {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: #FF8AAE;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+      margin-left: 1rem;
+    }
+    .switcher:hover {
+      transform: scale(1.1);
+      background: #FF6B9D;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #FF8AAE, #FFD1DC);
+      border-radius: 1rem;
+      margin: 1rem 0;
+      transition: width 0.2s ease, height 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
     }
     .result {
       margin-top: 1.5rem;
@@ -85,24 +110,27 @@
       border-radius: 1rem;
       font-weight: bold;
     }
-    .section {
-      padding: 7rem 1.5rem;
+    
+    /* 🌙 Тёмная тема */
+    body.dark {
+      background-color: #1a1a2e;
+      color: #f0f0f0;
     }
-
-    .section-light {
-      background: #fff3e8;
+    body.dark .section {
+      background: #241c21;
+      box-shadow: 0 4px 12px rgba(255, 138, 174, 0.4);
     }
-
-    .section-dark {
-      background: #ffe1ea;
+    body.dark .section h2 {
+      color: #FFB6C1;
+      border-bottom-color: #FF6B9D;
     }
-
-    body.dark .section-light {
+    body.dark li {
       background: #181416;
     }
-
-    body.dark .section-dark {
-      background: #241c21;
+    body.dark input[type="text"] {
+      background: #181416;
+      color: #f0f0f0;
+      border-color: #FF6B9D;
     }
   </style>
 </head>
@@ -111,32 +139,47 @@
   <!-- Задание 1: Счётчик кликов -->
   <section class="section" id="task1">
     <h2>Задание №1: Счётчик кликов</h2>
-    <div id="contai">
-        <p id="counter">0</p>
-    </div>
-    <button id="addUserBtn">Увеличить счетчик</button>
+    <p id="counter" style="font-size: 2rem; font-weight: bold; color: #FF8AAE;">0</p>
+    <button id="addUserBtn">Увеличить счётчик</button>
   </section>
 
   <!-- Задание 2: Приветствие -->
   <section class="section" id="task2">
     <h2>Задание №2: Приветствие</h2>
-    <div id="container">
-      <input type="text" id="name" placeholder="Введите имя">
+    <div>
+      <input type="text" id="nameInput" placeholder="Введите имя">
+      <button id="hiUserBtn">Привет</button>
     </div>
-    <button id="hiUserBtn">Привет</button>
-    <ul id="Greeting"></ul>
+    <ul id="greetingList" style="margin-top: 1rem;"></ul>
   </section>
 
-  <!-- Задание 3: Data-атрибуты и вычисления -->
+  <!-- Задание 3: Переключатель темы -->
   <section class="section" id="task3">
     <h2>Задание №3: Переключатель темы</h2>
     <button id="themeUserBtn">Сменить тему</button>
-  
-    <div id="container">
-        <a class="switcher" id="themeToggle">🌙</a>
+    <a class="switcher" id="themeToggle">🌙</a>
+  </section>
+
+  <!-- Задание 4: Список дел -->
+  <section class="section" id="task4">
+    <h2>Задание №4: Список дел</h2>
+    <div>
+      <input type="text" id="todoInput" placeholder="Что нужно сделать?">
+      <button id="addTodoBtn">Добавить</button>
     </div>
-    
-    </section>
+    <ul id="todoList" style="margin-top: 1rem;"></ul>
+  </section>
+
+  <!-- Задание 5: Управление размером -->
+  <section class="section" id="task5">
+    <h2>Задание №5: Управление размером</h2>
+    <div>
+      <button id="decreaseBtn">−</button>
+      <button id="increaseBtn">+</button>
+    </div>
+    <div id="sizeBox" class="box">100px</div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
